@@ -7,10 +7,11 @@ header > a {
   color: #6a00ff;
 }
 
-/* li {
-  display: inline-block
+header li {
+  display: inline-block;
+  margin-right: 10px;
   
-} */
+}
 
 h1 {
   font-size: xx-large;
@@ -44,4 +45,14 @@ h3 > a {
   justify-content: center;
   border: solid;
   font-size: 75px;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+	
+.delete-form button {
+  color: red;
 }

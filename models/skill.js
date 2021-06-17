@@ -8,11 +8,29 @@ module.exports = {
     getAll,
     getOne,
     create,
+    deleteOne,
+    updateId,
+    
 };
+
+
+
+function updateId(id, updatedSkill) {
+  id = parseInt(id);
+  const skillId = skills.find(skill => skill.id === id);
+  Object.assign(skillId, updatedSkill)
+}
+
+function deleteOne(id) {
+  id = parseInt(id);
+  const idx = skills.findIndex(skill => skill.id === id);
+  skills.splice(idx, 1);
+};
+
   
 function create(newSkill) {
   newSkill.id = Date.now() % 1000000;
-  newSkill.done = false;
+  newSkill.link = ""
   skills.push(newSkill);
 }
 
